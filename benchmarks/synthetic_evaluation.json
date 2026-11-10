@@ -1,0 +1,349 @@
+{
+  "created_at": "2026-11-10T17:42:59.515508+00:00",
+  "scope": "synthetic, machine-generated single-page samples; offline rules+OCR only",
+  "documents": 9,
+  "fields": 45,
+  "correct_fields": 45,
+  "field_exact_match_rate": 1.0,
+  "document_exact_match_rate": 1.0,
+  "by_format": {
+    "digital_pdf": {
+      "documents": 3,
+      "field_accuracy": 1.0,
+      "document_exact_match": 1.0
+    },
+    "scanned_pdf": {
+      "documents": 3,
+      "field_accuracy": 1.0,
+      "document_exact_match": 1.0
+    },
+    "image_png": {
+      "documents": 3,
+      "field_accuracy": 1.0,
+      "document_exact_match": 1.0
+    }
+  },
+  "cases": [
+    {
+      "kind": "invoice",
+      "format": "digital_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "invoice_number": true,
+        "vendor": true,
+        "invoice_date": true,
+        "total": true,
+        "currency": true
+      },
+      "expected": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "predicted": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "processing_ms": 5.978,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": []
+      }
+    },
+    {
+      "kind": "invoice",
+      "format": "scanned_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "invoice_number": true,
+        "vendor": true,
+        "invoice_date": true,
+        "total": true,
+        "currency": true
+      },
+      "expected": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "predicted": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "processing_ms": 301.769,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ]
+      }
+    },
+    {
+      "kind": "invoice",
+      "format": "image_png",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "invoice_number": true,
+        "vendor": true,
+        "invoice_date": true,
+        "total": true,
+        "currency": true
+      },
+      "expected": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "predicted": {
+        "invoice_number": "INV-100",
+        "vendor": "North Star LLC",
+        "invoice_date": "2026-11-10",
+        "total": "124.50",
+        "currency": "USD"
+      },
+      "processing_ms": 156.408,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ],
+        "image_size": [
+          1000,
+          650
+        ]
+      }
+    },
+    {
+      "kind": "contract",
+      "format": "digital_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "agreement_id": true,
+        "party_a": true,
+        "party_b": true,
+        "effective_date": true,
+        "governing_law": true
+      },
+      "expected": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "predicted": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "processing_ms": 1.313,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": []
+      }
+    },
+    {
+      "kind": "contract",
+      "format": "scanned_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "agreement_id": true,
+        "party_a": true,
+        "party_b": true,
+        "effective_date": true,
+        "governing_law": true
+      },
+      "expected": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "predicted": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "processing_ms": 301.857,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ]
+      }
+    },
+    {
+      "kind": "contract",
+      "format": "image_png",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "agreement_id": true,
+        "party_a": true,
+        "party_b": true,
+        "effective_date": true,
+        "governing_law": true
+      },
+      "expected": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "predicted": {
+        "agreement_id": "C-902",
+        "party_a": "Lake Corp",
+        "party_b": "Oak Inc",
+        "effective_date": "2026-02-20",
+        "governing_law": "Texas"
+      },
+      "processing_ms": 205.859,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ],
+        "image_size": [
+          1000,
+          650
+        ]
+      }
+    },
+    {
+      "kind": "form",
+      "format": "digital_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "form_id": true,
+        "full_name": true,
+        "email": true,
+        "phone": true,
+        "submission_date": true
+      },
+      "expected": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "predicted": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "processing_ms": 1.608,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": []
+      }
+    },
+    {
+      "kind": "form",
+      "format": "scanned_pdf",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "form_id": true,
+        "full_name": true,
+        "email": true,
+        "phone": true,
+        "submission_date": true
+      },
+      "expected": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "predicted": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "processing_ms": 330.834,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ]
+      }
+    },
+    {
+      "kind": "form",
+      "format": "image_png",
+      "correct": 5,
+      "total": 5,
+      "exact_match": true,
+      "field_matches": {
+        "form_id": true,
+        "full_name": true,
+        "email": true,
+        "phone": true,
+        "submission_date": true
+      },
+      "expected": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "predicted": {
+        "form_id": "F-123",
+        "full_name": "A Test Person",
+        "email": "test@example.com",
+        "phone": "555-0101",
+        "submission_date": "2026-01-07"
+      },
+      "processing_ms": 167.572,
+      "metadata": {
+        "pages": 1,
+        "ocr_pages": [
+          1
+        ],
+        "image_size": [
+          1000,
+          650
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+digraph Platform {
+  graph [rankdir=TB, bgcolor="#0c1527", pad="0.35", nodesep="0.44", ranksep="0.68", label="AISX DOCUMENT INTELLIGENCE | SERVICE ARCHITECTURE", labelloc="t", fontname="DejaVu Sans", fontsize=19, fontcolor="#f1f6ff"];
+  node [shape=box, style="rounded,filled", color="#405b7f", fillcolor="#192b46", fontname="DejaVu Sans", fontsize=11, fontcolor="#f0f6ff", penwidth=1.25, margin="0.18,0.13"];
+  edge [color="#7ba9ea", arrowsize=.7, penwidth=1.45];
+  users [label="Employees · Analysts · Reviewers\nAISX AI OS department agents", fillcolor="#204565"];
+  gateway [label="API Gateway / TLS / SSO (cloud target)\nLocal: API keys + tenant binding", fillcolor="#214365"];
+  api [label="FastAPI Control Plane\nUpload · Schema Registry · Document APIs\nReview · Audit · Metrics", fillcolor="#2c436d"];
+  ingest [label="Hardened Input Parsing\nPDF / PNG / JPEG / WEBP\nSize · Type · Page Limits"];
+  parser [label="Document Processing\nPyMuPDF text · Tesseract OCR\nScanned PDF rendering"];
+  engine [label="Extraction Router\nRules baseline | Optional OpenAI Vision\nEvidence + Missing-Field Flags"];
+  validation [label="Schema Validation\nDate · Email · Total · Required Fields\nNever auto-approve"];
+  review [label="Human Review Workflow\nCorrect · Approve · Reject"];
+  store [label="SQLite + Audit Hash Chain\nSingle instance (current)\nPostgreSQL + object store (target)", fillcolor="#34495a"];
+  metrics [label="Prometheus Metrics\nTest Evidence · Evaluation JSON\nLatency & Error Reporting", fillcolor="#34495a"];
+  adapters [label="Enterprise AI OS REST Connector\nGET capabilities · authorized results\nNo autonomous document approvals", fillcolor="#204565"];
+  users -> gateway -> api -> ingest -> parser -> engine -> validation -> review;
+  validation -> store;
+  review -> store;
+  api -> metrics;
+  store -> adapters;
+  {rank=same; parser; engine;}
+}

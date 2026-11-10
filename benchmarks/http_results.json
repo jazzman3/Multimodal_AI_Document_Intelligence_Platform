@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-11-10T17:43:02.210969+00:00",
+  "environment": "local uvicorn HTTP; loopback; SQLite; deterministic PDF extraction; 4 client threads",
+  "requests": 120,
+  "posts": 30,
+  "gets": 90,
+  "successes": 120,
+  "errors": 0,
+  "seconds": 0.6642,
+  "throughput_rps": 180.68,
+  "latency_ms": {
+    "p50": 9.54,
+    "p95": 51.772,
+    "p99": 70.12
+  },
+  "by_operation": {
+    "POST": {
+      "count": 30,
+      "p95_ms": 25.509
+    },
+    "GET": {
+      "count": 90,
+      "p95_ms": 54.975
+    }
+  }
+}
